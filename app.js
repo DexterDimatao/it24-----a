@@ -25,3 +25,10 @@ function isPalindrome(str) {
     const reversedStr = str.split('').reverse().join('');
     return reversedStr === str ? `${str} is a palindrome.` : `${str} is not a palindrome.`;
 }
+// Using Conditional Statements (if else)
+let age = 20;
+if (age < 18) {
+    console.log("You are a minor.");
+} else {
+    console.log("You are an adult.");
+}
