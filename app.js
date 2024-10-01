@@ -20,3 +20,8 @@ function isPrime(num) {
     }
     return `${num} is prime.`;
 }
+// Function to determine if a string is a palindrome
+function isPalindrome(str) {
+    const reversedStr = str.split('').reverse().join('');
+    return reversedStr === str ? `${str} is a palindrome.` : `${str} is not a palindrome.`;
+}
