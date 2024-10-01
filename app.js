@@ -65,3 +65,9 @@ console.log("Numbers from 1 to 5:");
 for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
+
+// Testing the functions
+console.log(isOddOrEven(number)); // Check if number is odd or even
+console.log(isPrime(number)); // Check if number is prime
+console.log(isPalindrome("racecar")); // Check if string is a palindrome
+console.log(isPalindrome("hello")); // Check if string is a palindrome
