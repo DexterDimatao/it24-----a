@@ -63,6 +63,7 @@
         #map {
             height: 600px;
         }
+
     </style>
     </head>
     <body>
@@ -95,95 +96,12 @@
               </div>
             </div>
           </nav>
-          <div class="container mt-4">
-            <h1>DEXTER APPLET</h1>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-              </div>
-              <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 1">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 1</h5>
-                       
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 2">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 2</h5>
-                       
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 3">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 3</h5>
-                     
-                    </div>
-                </div>
-            </div>
-            <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 4">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 4</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 5">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 5</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 6">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 6</h5>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 7">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 7</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 8">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 8</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 9">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 9</h5>
-                        
-                    </div>
-                </div>
-            </div>
-            <script>
-                document.getElementById('searchInput').addEventListener('input', function() {
-                    const query = this.value.toLowerCase();
-                    const cards = document.querySelectorAll('.card');
-                    cards.forEach(card => {
-                        const title = card.getAttribute('data-title').toLowerCase();
-                        if (title.includes(query)) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            </script>
+          
+          <div class="applet-container">
+            <h3>Leaflet Map Basics</h3>
+            <div id="map"></div>
+          
+        </div>
             </body>
             </html>
             
