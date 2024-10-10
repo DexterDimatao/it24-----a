@@ -20,4 +20,3 @@ class StudentList {
             console.error('Error fetching data:', error);
         }
     }
-    
