@@ -1,0 +1,19 @@
+[
+    {
+        "student_id": 1,
+        "student_name": "DEXTER PAGKAKALAMEG",
+        "student_program": "BS-Information Technology"
+    },
+
+    {
+        "student_id": 2,
+        "student_name": "LLOYD KAYB",
+        "student_program": "BS-Financial Management"
+    },
+
+    {
+        "student_id": 3,
+        "student_name": "YAN YAN NAGA AMPO",
+        "student_program": "BS-Computer Engineering"
+    }
+]
