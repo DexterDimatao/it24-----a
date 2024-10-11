@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-</head>
-<body> 
+
     <style>
-        
-        button{
+        body {
+            background: cyan;
+            color: black;
+        }
+        button {
             background-color: rgb(96, 9, 157);
             color: aquamarine;
-        }
-       .body {
-            background-color: #4c0e59; 
         }
         .nav-tabs {
             background-color: #505458; 
@@ -44,141 +43,108 @@
         .card-group {
             margin-top: 20px;
         }
-    
-    
     </style>
-    </head>
-
-    <style>
-        body{
-            background: cyan;
-            color:black
-        }
-</style>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="applet-2.html">Leaflet Map</a></li>
-                      <li><a class="dropdown-item" href="applet-3.html">Logger</a></li>
-                      <li><a class="dropdown-item" href="applet-4.html">Search</a></li>
-                    </ul>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="applet-2.html">Leaflet Map</a></li>
+                            <li><a class="dropdown-item" href="applet-3.html">Logger</a></li>
+                            <li><a class="dropdown-item" href="applet-4.html">Search</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </nav>
-                    
-                  
-          <div class="container mt-4">
-            <h1>DEXTER APPLET</h1>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-              </div>
-              <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 1">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 1</h5>
-                       
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 2">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 2</h5>
-                       
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 3">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 3</h5>
-                     
-                    </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>DEXTER APPLET</h1>
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
+            <input type="text" id="searchInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <div class="card-group">
+            <div class="card" data-title="CARD 1">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 1</h5>
                 </div>
             </div>
-            <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 4">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 4</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 5">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 5</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 6">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 6</h5>
-                        
-                    </div>
+            <div class="card" data-title="CARD 2">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 2</h5>
                 </div>
             </div>
-            <div class="card-group" id="cardGroup">
-                <div class="card" data-title="CARD 7">
-                   
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 7</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 8">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 8</h5>
-                        
-                    </div>
-                </div>
-                <div class="card" data-title="CARD 9">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">CARD 9</h5>
-                        
-                    </div>
+            <div class="card" data-title="CARD 3">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 3</h5>
                 </div>
             </div>
-            <script>
-                document.getElementById('searchInput').addEventListener('input', function() {
-                    const query = this.value.toLowerCase();
-                    const cards = document.querySelectorAll('.card');
-                    cards.forEach(card => {
-                        const title = card.getAttribute('data-title').toLowerCase();
-                        if (title.includes(query)) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            </script>
-            </body>
-            </html>
-            
-    
+        </div>
+        <div class="card-group">
+            <div class="card" data-title="CARD 4">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 4</h5>
+                </div>
+            </div>
+            <div class="card" data-title="CARD 5">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 5</h5>
+                </div>
+            </div>
+            <div class="card" data-title="CARD 6">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 6</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card" data-title="CARD 7">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 7</h5>
+                </div>
+            </div>
+            <div class="card" data-title="CARD 8">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 8</h5>
+                </div>
+            </div>
+            <div class="card" data-title="CARD 9">
+                <div class="card-body">
+                    <h5 class="card-title">CARD 9</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                card.style.display = title.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
