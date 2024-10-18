@@ -78,74 +78,27 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1>DEXTER APPLET</h1>
-        <div class="input-group input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
-            <input type="text" id="searchInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-        </div>
-        <div class="card-group">
-            <div class="card" data-title="CARD 1">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 1</h5>
-                </div>
+        <body>
+            <div class="contain">
+              <h3>API key </h3>
+              <input type="text" id="apiInput" placeholder="Enter API key" />
             </div>
-            <div class="card" data-title="CARD 2">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 2</h5>
-                </div>
-            </div>
-            <div class="card" data-title="CARD 3">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 3</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-group">
-            <div class="card" data-title="CARD 4">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 4</h5>
-                </div>
-            </div>
-            <div class="card" data-title="CARD 5">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 5</h5>
-                </div>
-            </div>
-            <div class="card" data-title="CARD 6">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 6</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-group">
-            <div class="card" data-title="CARD 7">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 7</h5>
-                </div>
-            </div>
-            <div class="card" data-title="CARD 8">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 8</h5>
-                </div>
-            </div>
-            <div class="card" data-title="CARD 9">
-                <div class="card-body">
-                    <h5 class="card-title">CARD 9</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                const title = card.getAttribute('data-title').toLowerCase();
-                card.style.display = title.includes(query) ? '' : 'none';
-            });
-        });
-    </script>
+              <div class="container">
+                  <h2>Weather</h2>
+          
+                  <input type="text" id="cityInput" placeholder="Enter city name" />
+                  <button id="getWeatherBtn" class="btn btn-primary" style="margin-top: -0.35rem;">Get Weather</button>
+                  <button id="getLocationBtn" class="btn btn-secondary"style="margin-top: -0.35rem;">Use My Location</button>
+          
+                  <div id="weatherCard" class="weather-card" style="display: none;">
+                      <br>
+                      <h2 id="cityName"></h2>
+                      <p id="temperature"></p>
+                      <p id="description"></p>
+                      <p id="humidity"></p>
+                      <p id="windSpeed"></p>
+                  </div>
+              </div>
+    <script src="applet-5.js"></script>
 </body>
 </html>
